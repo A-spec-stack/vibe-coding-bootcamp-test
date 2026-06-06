@@ -9,3 +9,6 @@ out/
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+# interne CI / Arbeitsdokumente
+Arbeitsanweisung_HickethierX_v1_1*.docx
+Leit-CI_Farbregelkarte_HickethierX.pdf
