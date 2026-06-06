@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-playfair",
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+  weight: ["300", "400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -19,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={inter.variable}>
-      <body className={inter.className}>{children}</body>
+    <html lang="de" className={`${playfair.variable} ${lato.variable}`}>
+      <body className={lato.className}>{children}</body>
     </html>
   );
 }
