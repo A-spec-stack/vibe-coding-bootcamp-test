@@ -14,6 +14,10 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    env:
+      NEXT_PUBLIC_ADRESSE: "089 - MUC"
+      NEXT_PUBLIC_MOTTO: "andrea.baut.mit.ki"
+      NEXT_PUBLIC_SUBTEXT: "Achtung: Dies ist eine reine Testumgebung - alle Inhalte sind fiktiv."
 
     steps:
       - name: Checkout repository
